@@ -13,7 +13,7 @@
     <link href="https://fonts.bunny.net/css?family=inter:400,600|antic-didone:400&display=swap" rel="stylesheet" />
 
     {{-- Resource --}}
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['public/css/app.css', 'public/js/app.js'])
 
     <style>
         :root {
@@ -25,13 +25,6 @@
 <body>
     @include('components.nav')
     @yield('content')
-    <!-- <iframe
-        allow="microphone;"
-        width="350"
-        height="430"
-        src="https://console.dialogflow.com/api-client/demo/embedded/1979a3d1-34b3-4f98-a245-20c3bea177c3">
-    </iframe> -->
-
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <df-messenger
         intent="WELCOME"
