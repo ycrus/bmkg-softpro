@@ -1,0 +1,69 @@
+{
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf": {
+    "file": "assets/fa-brands-400-276af030.ttf",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf"
+  },
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2": {
+    "file": "assets/fa-brands-400-4d46c3bc.woff2",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2"
+  },
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf": {
+    "file": "assets/fa-regular-400-7caa2d8d.ttf",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf"
+  },
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2": {
+    "file": "assets/fa-regular-400-003b5514.woff2",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2"
+  },
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf": {
+    "file": "assets/fa-solid-900-23c4f99e.ttf",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf"
+  },
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2": {
+    "file": "assets/fa-solid-900-38e76ab3.woff2",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2"
+  },
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.ttf": {
+    "file": "assets/fa-v4compatibility-e868f301.ttf",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.ttf"
+  },
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.woff2": {
+    "file": "assets/fa-v4compatibility-d0cd8241.woff2",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.woff2"
+  },
+  "public/css/app.css": {
+    "file": "assets/app-e297ec4e.css",
+    "isEntry": true,
+    "src": "public/css/app.css"
+  },
+  "public/images/slides/0.jpeg": {
+    "file": "assets/0-64b6bd8c.jpeg",
+    "src": "public/images/slides/0.jpeg"
+  },
+  "public/images/slides/8.jpg": {
+    "file": "assets/8-ce6d1a5f.jpg",
+    "src": "public/images/slides/8.jpg"
+  },
+  "public/js/app.css": {
+    "file": "assets/app-50acba4b.css",
+    "src": "public/js/app.css"
+  },
+  "public/js/app.js": {
+    "assets": [
+      "assets/fa-brands-400-4d46c3bc.woff2",
+      "assets/fa-brands-400-276af030.ttf",
+      "assets/fa-regular-400-003b5514.woff2",
+      "assets/fa-regular-400-7caa2d8d.ttf",
+      "assets/fa-solid-900-38e76ab3.woff2",
+      "assets/fa-solid-900-23c4f99e.ttf",
+      "assets/fa-v4compatibility-d0cd8241.woff2",
+      "assets/fa-v4compatibility-e868f301.ttf"
+    ],
+    "css": [
+      "assets/app-50acba4b.css"
+    ],
+    "file": "assets/app-d9121f36.js",
+    "isEntry": true,
+    "src": "public/js/app.js"
+  }
+}
