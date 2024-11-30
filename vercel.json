@@ -28,10 +28,4 @@
         "SESSION_DRIVER": "cookie"
     },
     "outputDirectory": "public",
-    "builds": [
-        {
-            "src": "/public/**",
-            "use": "@vercel/static"
-        }
-    ]
 }
