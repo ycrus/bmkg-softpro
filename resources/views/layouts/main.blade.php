@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>@yield('title' . ' - BMKG Geofisika Yogyakarta', 'BMKG Geofisika Yogyakarta')</title>
 
     <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
@@ -12,8 +13,8 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,600|antic-didone:400&display=swap" rel="stylesheet" />
 
-    <script src="http://bmkg-softpro.vercel.app/build/assets/js/app.js" defer></script>
-    <link href="http://bmkg-softpro.vercel.app/build/assets/css/app.css" rel="stylesheet">
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <style>
         :root {
