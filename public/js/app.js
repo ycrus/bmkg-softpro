@@ -9,4 +9,3 @@ window.Alpine = Alpine;
 Alpine.plugin(collapse);
 Alpine.start();
 
-app.use(express.static(__dirname + "/public/"));
