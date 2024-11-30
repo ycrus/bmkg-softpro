@@ -12,8 +12,8 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,600|antic-didone:400&display=swap" rel="stylesheet" />
 
-    {{-- Resource --}}
-    @vite(['public/css/app.css', 'public/js/app.js'])
+    <script src="http://bmkg-softpro.vercel.app/build/assets/js/app.js" defer></script>
+    <link href="http://bmkg-softpro.vercel.app/build/assets/css/app.css" rel="stylesheet">
 
     <style>
         :root {
