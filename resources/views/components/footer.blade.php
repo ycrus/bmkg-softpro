@@ -37,8 +37,7 @@
     <div class="py-5 mt-10 text-sm text-center text-white bg-gray-800 dark:bg-gray-900">
         <div class="container max-w-lg px-4 mx-auto">
             <p class="mt-2 text-gray-400">
-                The website is formed by Afif Whelly Artissandi, Wuri Handayani, Marjona Vicky, Rachel Meisya,
-                & Abdurrahman Hanifatullah Surya Putra who are currently study at University of Mercu Buana Yogyakarta
+                The website is formed Team 3 Software Project who are currently study at University of Mercu Buana Yogyakarta
             </p>
             <p class="mt-2 text-gray-400">
                 Copyright &copy; <?php echo date('Y'); ?> - All Rights Reserved

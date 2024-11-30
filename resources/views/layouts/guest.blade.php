@@ -13,7 +13,7 @@
     <link href="https://fonts.bunny.net/css?family=inter:400,600&display=swap" rel="stylesheet" />
 
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['public/css/app.css', 'public/js/app.js'])
 </head>
 
 <body class="font-sans antialiased text-gray-900">
@@ -27,11 +27,9 @@
             </a>
         </div>
 
-        <div @class([
-            'w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg',
-            'sm:max-w-md' => request()->route()->named('login'),
+        <div @class([ 'w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg' , 'sm:max-w-md'=> request()->route()->named('login'),
             'sm:max-w-screen-md' => request()->route()->named('register'),
-        ])>
+            ])>
             {{ $slot }}
         </div>
     </div>

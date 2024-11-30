@@ -1,9 +1,9 @@
 <h1 align="center">
-  <img src="https://github.com/unip/bmkg-geofisika/blob/main/public/images/logo-bmkg.png?raw=true" width="100" > <br>
+  <img src="https://github.com/ycrus/bmkg-softpro/blob/main/public/images/logo-bmkg.png?raw=true" width="100" > <br>
   BMKG Yogyakarta
 </h1>
 
-<p align="center">Projek kelompok mata kuliah e-Government 2023</p>
+<p align="center">Projek kelompok mata kuliah Sofware Project 2024</p>
 
 ---------------------------------------------
 
@@ -13,7 +13,7 @@
 - Tailwind CSS
 
 ## Start project:
-- Clone repo: `git clone https://github.com/unip/bmkg-geofisika.git`
+- Clone repo: `git clone https://github.com/ycrus/bmkg-softpro.git`
 - Install composer packages: `composer install`
 - Install node packages: `npm i`
 - Edit `.env` (sesuaikan database, dll)
@@ -25,6 +25,6 @@
 ## Kelompok:
 - Afif Whelly Artissandi
 - Wuri Handayani
-- Marjona Vicky
+- 
 - Rachel Meisya Halmahera
-- Abdurrahman Hanifatullah S. P.
+- Yohanes Crusc Yunianto Tinitih
