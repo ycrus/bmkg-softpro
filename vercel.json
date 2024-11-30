@@ -41,7 +41,13 @@
         "VIEW_COMPILED_PATH": "/tmp",
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie"
+        "SESSION_DRIVER": "cookie",
+        "DB_CONNECTION": "pgsql",
+        "DB_HOST": "aws-0-ap-southeast-1.pooler.supabase.com",
+        "DB_PORT": "6543",
+        "DB_DATABASE": "postgres",
+        "DB_USERNAME": "postgres.fgfealmzirggrvdwghfh",
+        "DB_PASSWORD": "Crusc@14121995"
     },
     "outputDirectory": "public"
 }
