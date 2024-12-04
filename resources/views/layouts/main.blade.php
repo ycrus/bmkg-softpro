@@ -30,7 +30,7 @@
     <df-messenger
         intent="WELCOME"
         chat-title="Megabot"
-        agent-id="1979a3d1-34b3-4f98-a245-20c3bea177c3"
+        agent-id="c9f258c1-8808-4b8e-b660-8efdca1c1703"
         chat-icon="images/icon.png"
         language-code="en">
     </df-messenger>
