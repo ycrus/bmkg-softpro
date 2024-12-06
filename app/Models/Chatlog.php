@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Chatlog extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['question', 'answer'];
 }
