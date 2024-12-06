@@ -93,6 +93,6 @@ Route::middleware('auth')->group(function () {
     });
 });
 
-Route::post('/webhook', [DialogflowWebhookController::class, 'handleWebhook']);
+
 
 require __DIR__ . '/auth.php';
