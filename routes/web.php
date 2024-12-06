@@ -12,6 +12,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SewaAlatController;
 use App\Http\Middleware\Admin;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DialogflowWebhookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -91,5 +92,7 @@ Route::middleware('auth')->group(function () {
         Route::resource('peta-sebaran', AdminPetaSebaranController::class);
     });
 });
+
+Route::post('/webhook', [DialogflowWebhookController::class, 'handleWebhook']);
 
 require __DIR__ . '/auth.php';
