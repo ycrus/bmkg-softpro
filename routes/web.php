@@ -70,6 +70,19 @@ Route::middleware('auth')->group(function () {
                 Route::get('/permohonan/{sewa_alat}/download', 'download')->name('download-permohonan'); // download permohonan
             });
 
+        Route::name('history-megabot.')
+            ->prefix('history-megabot')
+            ->controller(DialogflowWebhookController::class)
+            ->group(function () {
+                Route::get('/', 'index')->name('index'); // index halaman sewa alat
+                // Route::get('/permohonan', 'create')->name('create'); // menampilkan form permohonan sewa alat
+                // Route::post('/permohonan/tambah', 'store')->name('store'); // submit permohonan sewa alat
+                // Route::get('/permohonan/{sewa_alat}/ubah', 'edit')->name('edit'); // menampilkan form ubaha data permohonan by id
+                // Route::put('/permohonan/{sewa_alat}/ubah', 'update')->name('update'); // ubaha data permohonan by id
+                // Route::delete('/permohonan/{sewa_alat}/hapus', 'destroy')->name('destroy'); // hapus data permohonan by id
+                // Route::get('/permohonan/{sewa_alat}/download', 'download')->name('download-permohonan'); // download permohonan
+            });
+
         Route::resource('permohonan-magang', MagangController::class);
         Route::get('permohonan-magang/{permohonan_magang}', [MagangController::class, 'download'])
             ->name('permohonan-magang.download');
@@ -87,6 +100,7 @@ Route::middleware('auth')->group(function () {
         Route::redirect('/', 'dashboard');
         Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
         Route::resource('sewa-alat', AdminSewaAlatController::class);
+        Route::resource('history-megabot', DialogflowWebhookController::class);
         Route::resource('permohonan-magang', AdminPermohonanMagangController::class);
         Route::resource('klaim-asuransi', AdminKlaimAsuransiController::class);
         Route::resource('peta-sebaran', AdminPetaSebaranController::class);

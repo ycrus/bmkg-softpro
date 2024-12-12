@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Chatlog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DialogflowWebhookController extends Controller
 {
@@ -25,5 +26,21 @@ class DialogflowWebhookController extends Controller
         return response()->json([
             'fulfillmentText' => $botMessage,
         ]);
+    }
+
+    public function index()
+    {
+        $results = DB::select('select question, count(question) as count 
+        from chatlogs 
+        group by question 
+        order by count DESC
+        limit 10');
+
+        $data = [
+            'title' => 'Sewa Alat',
+            'permohonan' => $results,
+        ];
+
+        return view('pages.admin.history-megabot.index', $data);
     }
 }
