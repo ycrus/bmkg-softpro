@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Chatlog;
 use Illuminate\Http\Request;
-use App\Models\ChatLog;
 
 class DialogflowWebhookController extends Controller
 {
@@ -16,7 +16,7 @@ class DialogflowWebhookController extends Controller
         $botMessage = $request->input('queryResult.fulfillmentText');
 
         // Save to database
-        ChatLog::create([
+        Chatlog::create([
             'question' => $userMessage,
             'answer' => $botMessage,
         ]);
