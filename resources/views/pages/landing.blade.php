@@ -11,7 +11,7 @@ memanfaatkan berbagai peralatan canggih yang tersedia sesuai kebutuhan mereka. P
 alat dilakukan dengan mudah dan efisien, sesuai dengan tarif yang telah ditetapkan oleh pihak stasiun. ',
 ],
 [
-'images' => '/images/layanan-konsultasi.svg',
+'images' => '/images/layanan.jpg',
 'nama' => 'Pelayanan Jasa',
 'url' => '/layanan/konsultasi',
 'deskripsi' => 'Stasiun Geofisika juga menyediakan layanan informasi terkait gempa bumi, tsunami, dan listrik udara.
