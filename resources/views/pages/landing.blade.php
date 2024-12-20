@@ -6,52 +6,51 @@ $layanan = [
 'images' => '/images/layanan-sewa-alat.svg',
 'nama' => 'Sewa Alat',
 'url' => '/layanan/sewa-alat',
-'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sapiente recusandae mollitia omnis alias possimus officia.',
+'deskripsi' => 'Sewa alat di Stasiun Geofisika Sleman memungkinkan pengguna atau pelanggan untuk
+memanfaatkan berbagai peralatan canggih yang tersedia sesuai kebutuhan mereka. Proses peminjaman
+alat dilakukan dengan mudah dan efisien, sesuai dengan tarif yang telah ditetapkan oleh pihak stasiun. ',
 ],
 [
 'images' => '/images/layanan-konsultasi.svg',
 'nama' => 'Pelayanan Jasa',
 'url' => '/layanan/konsultasi',
-'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sapiente recusandae mollitia omnis alias possimus officia.',
+'deskripsi' => 'Stasiun Geofisika juga menyediakan layanan informasi terkait gempa bumi, tsunami, dan listrik udara.
+Informasi ini dapat dimanfaatkan untuk berbagai keperluan, termasuk klaim asuransi. Semua tarif layanan telah disesuaikan
+dengan peraturan perundang-undangan yang berlaku, memastikan transparansi dan kepatuhan terhadap hukum.',
 ],
 [
 'images' => '/images/layanan-klaim-asuransi.svg',
 'nama' => 'Permohonan Kunjungan',
 'url' => '/layanan/klaim-asuransi',
-'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sapiente recusandae mollitia omnis alias possimus officia.',
+'deskripsi' => 'Stasiun Geofisika Sleman menerima kunjungan edukatif dari berbagai tingkat pendidikan, mulai dari Taman Kanak-Kanak (TK) hingga perguruan tinggi.
+Selain itu, Stasiun Geofisika Sleman juga menyediakan layanan BGTS (BMKG Goes to School). ',
 ],
-// [
-// 'images' => '/images/layanan-peta-sebaran.svg',
-// 'nama' => 'Peta Sebaran',
-// 'url' => '/layanan/peta-sebaran',
-// 'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sapiente recusandae mollitia omnis alias possimus officia.',
-// ],
 ];
 
 $berita = [
 [
 'images' => '/images/slides/1.jpg',
-'dateCreated' => '2023-12-08 22:08:48',
-'title' => 'Lorem ipsum dolor sit, amet consectetur adipisicing.',
-'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sapiente recusandae mollitia omnis alias possimus officia.',
+'dateCreated' => '2024-12-05 22:08:48',
+'title' => 'Jurnal Stasiun Geofisika Sleman',
+'excerpt' => 'Jurnal Stasiun Geofisika Sleman adalah platform yang dirancang untuk mengembangkan kemampuan menulis seluruh pegawai, serta mahasiswa yang melakukan kerja praktik atau magang. ',
 ],
 [
 'images' => '/images/slides/2.jpg',
-'dateCreated' => '2023-12-08 22:08:48',
-'title' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sapiente recusandae mollitia omnis alias possimus officia.',
+'dateCreated' => '2024-12-1 22:08:48',
+'title' => 'Tabloid Bulanan Informasi geofisika',
+'excerpt' => 'Informasi geofisika mencakup laporan kegiatan Stasiun Geofisika setiap bulannya. Laporan ini meliputi berbagai aktivitas, seperti pemantauan gempa bumi, listrik udara, serta berbagai kegiatan lain yang dilakukan dalam kurun waktu satu bulan.',
 ],
 [
 'images' => '/images/slides/3.jpg',
-'dateCreated' => '2023-12-08 22:08:48',
-'title' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sapiente recusandae mollitia omnis alias possimus officia.',
+'dateCreated' => '2024-12-20 22:08:48',
+'title' => 'Aktivitas Gempa Bumi',
+'excerpt' => 'Informasi aktivitas gempabumi dalam kurun waktu 1 minggu. Berisi jumlah kejadian gempa, peta seismisitas dan statistikanya. Informasi ini akan selalu di update di media sosial stasiun Geofisika Sleman.',
 ],
 [
 'images' => '/images/slides/4.jpg',
-'dateCreated' => '2023-12-08 22:08:48',
-'title' => 'Lorem ipsum, dolor sit amet consectetur adipisicing.',
-'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sapiente recusandae mollitia omnis alias possimus officia.',
+'dateCreated' => '2024-12-8 22:08:48',
+'title' => 'BMKG goes to School',
+'excerpt' => 'Update kegiatan Tim Mitigasi, contoh berikut adalah kegiatan BGTS (BMKG goes to School). Kegiatan meliputi sosialisasi materi gempabumi tsunami, quiz dan simulasi evakuasi mandiri saat terjadi gempabumi di sekolah',
 ],
 ];
 @endphp
@@ -114,7 +113,7 @@ $berita = [
                             </a>
                         </h4>
                         <small
-                            class="text-gray-400 dark:text-gray-500">{{ \Carbon\Carbon::parse($artikel['dateCreated'])->isoFormat('dddd, d MMMM Y') }}</small>
+                            class="text-gray-400 dark:text-gray-500">{{ \Carbon\Carbon::parse($artikel['dateCreated'])->isoFormat('dddd, DD MMMM YYYY') }}</small>
                         <p class="hidden md:inline-block dark:text-gray-400">{{ $artikel['excerpt'] }}</p>
                     </div>
 

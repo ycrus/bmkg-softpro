@@ -9,13 +9,13 @@
             </span>
         </div>
         <div class="p-5 bg-white rounded-md shadow dark:bg-gray-700 dark:text-white">
-            <h3 class="text-xl font-bold dark:text-gray-400">Magang</h3>
+            <h3 class="text-xl font-bold dark:text-gray-400">Pelayanan Jasa</h3>
             <span>
                 <span class="text-3xl font-bold">{{ $magang->count() }}</span> permohonan
             </span>
         </div>
         <div class="p-5 bg-white rounded-md shadow dark:bg-gray-700 dark:text-white">
-            <h3 class="text-xl font-bold dark:text-gray-400">Asuransi</h3>
+            <h3 class="text-xl font-bold dark:text-gray-400">Permohonan Kunjungan</h3>
             <span>
                 <span class="text-3xl font-bold">{{ $asuransi->count() }}</span> permohonan
             </span>

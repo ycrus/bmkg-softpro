@@ -38,7 +38,7 @@ class SewaAlatController extends Controller
 
         $file = $request->file('surat_permohonan');
         $file_name = 'sewa-alat_user:' . $request->user()->id . '_date:' . Carbon::now() . '.' . $file->getClientOriginalExtension();
-        $path_permohonan = $file->storeAs('permohonan/sewa-alat', $file_name);
+        $path_permohonan = $file->storeAs('public/permohonan/sewa-alat', $file_name);
         $validated['user_id'] = Auth::id();
         $validated['surat_permohonan'] = $path_permohonan;
 
