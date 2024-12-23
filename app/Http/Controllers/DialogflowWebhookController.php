@@ -54,14 +54,6 @@ class DialogflowWebhookController extends Controller
         return view('pages.admin.history-megabot.index', $data);
     }
 
-    public function editUserPermissions(Request $request) {
-        foreach($request->all() as $key => $value) {
-          $decode = json_decode($value);
-  
-          foreach($decode as $decoded) {
-              echo $decoded['name'];
-          }
-      }
-    }
+    
     
 }
