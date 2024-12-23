@@ -16,7 +16,7 @@ class DialogflowWebhookController extends Controller
         // Generate a response (or fetch one from Dialogflow)
         $botMessage = $request->input('queryResult.fulfillmentText');
         $intent = $request->input('queryResult.intent.displayName');
-        $session = editUserPermissions($request->input('queryResult.outputContexts.name'));
+        $session = editUserPermissions($request->input('queryResult.outputContexts'));
         
 
         // Save to database
