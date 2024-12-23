@@ -16,7 +16,13 @@ class DialogflowWebhookController extends Controller
         // Generate a response (or fetch one from Dialogflow)
         $botMessage = $request->input('queryResult.fulfillmentText');
         $intent = $request->input('queryResult.intent.displayName');
-        $session = editUserPermissions($request);
+        $session = foreach($request->all() as $key => $value) {
+            $decode = json_decode($value);
+    
+            foreach($decode as $decoded) {
+                echo $decoded['name'];
+            }
+        };
 
         // Save to database
         Chatlog::create([
