@@ -9,5 +9,9 @@ class Chatlog extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['question', 'answer'];
+    protected $fillable = ['question', 
+    'answer',
+    'session_id',
+    'user_name',
+    'intent'];
 }
