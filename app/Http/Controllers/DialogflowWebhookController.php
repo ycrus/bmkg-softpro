@@ -21,7 +21,7 @@ class DialogflowWebhookController extends Controller
         $data = $getData[0]['name'];
         $collection = collect(explode('/', $data));
         $session = $collection[4];
-        
+
 
         // Save to database
         Chatlog::create([
@@ -41,17 +41,36 @@ class DialogflowWebhookController extends Controller
     {
         $results = DB::select('select question, count(question) as count 
         from chatlogs 
+        where question != ?
         group by question 
         order by count DESC
-        limit 10');
+        limit 10', array('WELCOME'));
+
+        $layanan = DB::select('select  
+        case when intent  = ?  then  ?
+ 	    when  intent  = ? then ?
+ 	    when intent = ? then ? end  as layanan,
+ 					count(intent) as jumlah
+        from chatlogs c 
+        where intent in(?, ?,?)
+        group by intent', array(
+            '02 Alat',
+            'Sewa Alat',
+            '01 Layanan',
+            'Pelayanan Jasa',
+            '03 Kunjungan',
+            'Permohonan Kunjungan',
+            '02 Alat',
+            '01 Layanan',
+            '03 Kunjungan'
+        ));
 
         $data = [
             'title' => 'Sewa Alat',
             'permohonan' => $results,
+            'layanan' => $layanan,
         ];
 
         return view('pages.admin.history-megabot.index', $data);
     }
-
-    
 }

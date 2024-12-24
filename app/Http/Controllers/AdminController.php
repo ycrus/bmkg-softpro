@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Asuransi;
 use App\Models\Magang;
 use App\Models\SewaAlat;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -15,6 +16,10 @@ class AdminController extends Controller
         $magang = Magang::all();
         $asuransi = Asuransi::all();
         $permohonan = collect([...$sewa_alat, ...$magang, ...$asuransi]);
+        $rating = DB::select('select sum(total)/count(question) ::float as percentage ,sum(total) as total, count(question) as user
+        from (select question , right(question,1) ::int as total
+        from chatlogs c 
+        where intent = ?)data', array('Bintang'));
 
         $data = [
             'title' => 'Dashboard',
@@ -22,6 +27,7 @@ class AdminController extends Controller
             'magang' => $magang,
             'asuransi' => $asuransi,
             'permohonan' => $permohonan,
+            'rating' => $rating,
         ];
 
         return view('pages.admin.dashboard', $data);

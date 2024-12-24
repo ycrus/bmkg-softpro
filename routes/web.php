@@ -1,5 +1,6 @@
 <?php
 
+use App\Exports\ChatExport;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminKlaimAsuransiController;
 use App\Http\Controllers\AdminPermohonanMagangController;
@@ -83,6 +84,8 @@ Route::middleware('auth')->group(function () {
                 // Route::get('/permohonan/{sewa_alat}/download', 'download')->name('download-permohonan'); // download permohonan
             });
 
+
+
         Route::resource('permohonan-magang', MagangController::class);
         Route::get('permohonan-magang/{permohonan_magang}', [MagangController::class, 'download'])
             ->name('permohonan-magang.download');
@@ -104,6 +107,9 @@ Route::middleware('auth')->group(function () {
         Route::resource('permohonan-magang', AdminPermohonanMagangController::class);
         Route::resource('klaim-asuransi', AdminKlaimAsuransiController::class);
         Route::resource('peta-sebaran', AdminPetaSebaranController::class);
+        Route::get('/download-excel', function () {
+            return Excel::download(new ChatExport, 'data.xlsx');
+        });
     });
 });
 

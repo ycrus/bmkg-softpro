@@ -20,6 +20,12 @@
                 <span class="text-3xl font-bold">{{ $asuransi->count() }}</span> permohonan
             </span>
         </div>
+        <div class="p-5 bg-white rounded-md shadow dark:bg-gray-700 dark:text-white">
+            <h3 class="text-xl font-bold dark:text-gray-400">Rating Megabot</h3>
+            <span>
+                <span class="text-3xl font-bold">'rating'-> percentage</span>/5
+            </span>
+        </div>
         {{-- <div class="p-5 bg-white rounded-md shadow dark:bg-gray-700 dark:text-white">
             <h3 class="text-xl font-bold dark:text-gray-400">Peta Sebaran</h3>
             <span>
