@@ -16,7 +16,7 @@ class DialogflowWebhookController extends Controller
         // Generate a response (or fetch one from Dialogflow)
         $botMessage = $request->input('queryResult.fulfillmentText');
         $intent = $request->input('queryResult.intent.displayName');
-        $session = $request->input('queryResult.outputContexts');
+        $session = json_encode($request->input('queryResult.outputContexts'));
         
 
         // Save to database
@@ -49,14 +49,5 @@ class DialogflowWebhookController extends Controller
         return view('pages.admin.history-megabot.index', $data);
     }
 
-    public function editUserPermissions(Request $request) {
-        foreach($request->all() as $key => $value) {
-          $decode = json_decode($value);
-  
-          foreach($decode as $decoded) {
-              echo $decoded['name'];
-          }
-      }
-    }
     
 }
