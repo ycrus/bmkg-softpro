@@ -18,11 +18,9 @@ class DialogflowWebhookController extends Controller
         $intent = $request->input('queryResult.intent.displayName');
         // $session = json_encode($request->input('queryResult.outputContexts'));
         $getData = $request->input('queryResult.outputContexts');
-        $session = $getData[0]['name'];
-        // $collection = collect(explode('/', $getData));
-        // $session = array_filter($collection, function ($item) {
-        //     return Str::startsWith($item, 'dfMessenger');
-        // });
+        $data = $getData[0]['name'];
+        $collection = collect(explode('/', $data));
+        $session = $collection[4];
         
 
         // Save to database
