@@ -16,13 +16,13 @@ class DialogflowWebhookController extends Controller
         // Generate a response (or fetch one from Dialogflow)
         $botMessage = $request->input('queryResult.fulfillmentText');
         $intent = $request->input('queryResult.intent.displayName');
-        // $session = json_encode($request->input('queryResult.outputContexts'));
+        $session = json_encode($request->input('queryResult.outputContexts'));
         $getData = $request->input('queryResult.outputContexts');
 
         $collection = collect(explode('/', $getData));
-        $session = array_filter($collection, function ($item) {
-            return Str::startsWith($item, 'dfMessenger');
-        });
+        // $session = array_filter($collection, function ($item) {
+        //     return Str::startsWith($item, 'dfMessenger');
+        // });
         
 
         // Save to database
