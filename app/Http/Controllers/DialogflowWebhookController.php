@@ -17,7 +17,7 @@ class DialogflowWebhookController extends Controller
         $botMessage = $request->input('queryResult.fulfillmentText');
         $intent = $request->input('queryResult.intent.displayName');
         // $session = json_encode($request->input('queryResult.outputContexts'));
-        $getData = json_encode($request->input('queryResult.outputContexts'));
+        $getData = $request->input('queryResult.outputContexts');
 
         $collection = collect(explode('/', $getData));
         $session = array_filter($collection, function ($item) {
