@@ -22,8 +22,11 @@
         </div>
         <div class="p-5 bg-white rounded-md shadow dark:bg-gray-700 dark:text-white">
             <h3 class="text-xl font-bold dark:text-gray-400">Rating Megabot</h3>
-            <span>
-                <span class="text-3xl font-bold">'rating'-> percentage</span>/5
+            <span><span class="text-3xl font-bold">
+                    @foreach ($bintang as $student)
+                    {{ $student->percentage }}
+                </span>/5 from {{ $student->user }} reviewer
+                @endforeach
             </span>
         </div>
         {{-- <div class="p-5 bg-white rounded-md shadow dark:bg-gray-700 dark:text-white">

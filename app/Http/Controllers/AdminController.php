@@ -27,7 +27,7 @@ class AdminController extends Controller
             'magang' => $magang,
             'asuransi' => $asuransi,
             'permohonan' => $permohonan,
-            'rating' => $rating,
+            'bintang' => $rating,
         ];
 
         return view('pages.admin.dashboard', $data);
