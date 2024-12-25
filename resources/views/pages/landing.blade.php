@@ -3,7 +3,7 @@
 @php
 $layanan = [
 [
-'images' => '/images/layanan-sewa-alat.svg',
+'images' => '/images/alat.png',
 'nama' => 'Sewa Alat',
 'url' => '/layanan/sewa-alat',
 'deskripsi' => 'Sewa alat di Stasiun Geofisika Sleman memungkinkan pengguna atau pelanggan untuk
@@ -19,7 +19,7 @@ Informasi ini dapat dimanfaatkan untuk berbagai keperluan, termasuk klaim asuran
 dengan peraturan perundang-undangan yang berlaku, memastikan transparansi dan kepatuhan terhadap hukum.',
 ],
 [
-'images' => '/images/layanan-klaim-asuransi.svg',
+'images' => '/images/kunjungan.jpg',
 'nama' => 'Permohonan Kunjungan',
 'url' => '/layanan/klaim-asuransi',
 'deskripsi' => 'Stasiun Geofisika Sleman menerima kunjungan edukatif dari berbagai tingkat pendidikan, mulai dari Taman Kanak-Kanak (TK) hingga perguruan tinggi.
@@ -29,25 +29,25 @@ Selain itu, Stasiun Geofisika Sleman juga menyediakan layanan BGTS (BMKG Goes to
 
 $berita = [
 [
-'images' => '/images/slides/1.jpg',
+'images' => '/images/jurnal.jpg',
 'dateCreated' => '2024-12-05 22:08:48',
 'title' => 'Jurnal Stasiun Geofisika Sleman',
 'excerpt' => 'Jurnal Stasiun Geofisika Sleman adalah platform yang dirancang untuk mengembangkan kemampuan menulis seluruh pegawai, serta mahasiswa yang melakukan kerja praktik atau magang. ',
 ],
 [
-'images' => '/images/slides/2.jpg',
+'images' => '/images/tabloid.png',
 'dateCreated' => '2024-12-1 22:08:48',
 'title' => 'Tabloid Bulanan Informasi geofisika',
 'excerpt' => 'Informasi geofisika mencakup laporan kegiatan Stasiun Geofisika setiap bulannya. Laporan ini meliputi berbagai aktivitas, seperti pemantauan gempa bumi, listrik udara, serta berbagai kegiatan lain yang dilakukan dalam kurun waktu satu bulan.',
 ],
 [
-'images' => '/images/slides/3.jpg',
+'images' => '/images/aktivitas.png',
 'dateCreated' => '2024-12-20 22:08:48',
 'title' => 'Aktivitas Gempa Bumi',
 'excerpt' => 'Informasi aktivitas gempabumi dalam kurun waktu 1 minggu. Berisi jumlah kejadian gempa, peta seismisitas dan statistikanya. Informasi ini akan selalu di update di media sosial stasiun Geofisika Sleman.',
 ],
 [
-'images' => '/images/slides/4.jpg',
+'images' => '/images/BGTS.jpeg',
 'dateCreated' => '2024-12-8 22:08:48',
 'title' => 'BMKG goes to School',
 'excerpt' => 'Update kegiatan Tim Mitigasi, contoh berikut adalah kegiatan BGTS (BMKG goes to School). Kegiatan meliputi sosialisasi materi gempabumi tsunami, quiz dan simulasi evakuasi mandiri saat terjadi gempabumi di sekolah',
