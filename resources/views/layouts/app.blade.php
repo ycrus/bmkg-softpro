@@ -39,11 +39,14 @@
             {{ $slot }}
 
             @if (Auth::user()->role != 'admin' || !request()->is('admin/*'))
-            <a href="https://wa.link/j5p51g" target="_blank"
-                class="fixed px-4 py-2 text-white transition duration-200 bg-green-500 rounded shadow-xl group hover:bg-green-600 bottom-5 right-5">
-                <i class="fa-regular fa-circle-question"></i>
-                Ada pertanyaan?
-            </a>
+            <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+            <df-messenger
+                intent="WELCOME"
+                chat-title="Megabot"
+                agent-id="c9f258c1-8808-4b8e-b660-8efdca1c1703"
+                chat-icon="images/icon.png"
+                language-code="en">
+            </df-messenger>
             @endif
         </main>
     </div>
