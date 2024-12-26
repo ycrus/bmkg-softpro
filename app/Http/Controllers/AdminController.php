@@ -16,7 +16,7 @@ class AdminController extends Controller
         $magang = Magang::all();
         $asuransi = Asuransi::all();
         $permohonan = collect([...$sewa_alat, ...$magang, ...$asuransi]);
-        $rating = DB::select('select sum(total)/count(question) ::float as percentage ,sum(total) as total, count(question) as user
+        $rating = DB::select('select round(cast((sum(total)/count(question)::float) as numeric),1) as percentage ,sum(total) as total, count(question) as user
         from (select question , right(question,1) ::int as total
         from chatlogs c 
         where intent = ?)data', array('Bintang'));
