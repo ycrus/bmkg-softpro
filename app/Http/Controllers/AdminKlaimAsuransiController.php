@@ -16,8 +16,10 @@ class AdminKlaimAsuransiController extends Controller
      */
     public function index()
     {
-        $data = ['title' => 'Klaim Asuransi',
-                'permohonan' => Asuransi::all(),];
+        $data = [
+            'title' => 'Permohonan Kunjungan',
+            'permohonan' => Asuransi::all(),
+        ];
         return view('pages.admin.klaim-asuransi.index', $data);
     }
 
@@ -68,7 +70,7 @@ class AdminKlaimAsuransiController extends Controller
             return redirect()->route('admin.klaim-asuransi.create')->with('error', 'Permohonan gagal dibuat');
         }
     }
-    
+
 
     /**
      * Display the specified resource.

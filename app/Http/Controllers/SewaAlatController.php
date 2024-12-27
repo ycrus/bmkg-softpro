@@ -33,7 +33,6 @@ class SewaAlatController extends Controller
             'sewa_berakhir' => 'required|date|after_or_equal:sewa_mulai',
             // 'surat_permohonan' => 'required|max:2048',
             'keterangan' => 'nullable',
-            'syarat' => 'required',
         ]);
 
         // $file = $request->file('surat_permohonan');
@@ -42,25 +41,25 @@ class SewaAlatController extends Controller
         $validated['user_id'] = Auth::id();
         // $validated['surat_permohonan'] = $path_permohonan;
 
-        // $alat_id = $validated['alat_id'];
-        // $sewa_mulai = $validated['sewa_mulai'];
-        // $sewa_berakhir = $validated['sewa_berakhir'];
+        $alat_id = $validated['alat_id'];
+        $sewa_mulai = $validated['sewa_mulai'];
+        $sewa_berakhir = $validated['sewa_berakhir'];
 
-        // // Check if there is any existing rental for the same barang and overlapping dates
-        // $ada_sewa = SewaAlat::where('alat_id', $alat_id)
-        //     ->where(function ($query) use ($sewa_mulai, $sewa_berakhir) {
-        //         $query->where(function ($q) use ($sewa_mulai, $sewa_berakhir) {
-        //             $q->where('sewa_mulai', '>=', $sewa_mulai)
-        //                 ->where('sewa_mulai', '<', $sewa_berakhir);
-        //         })
-        //             ->orWhere(function ($q) use ($sewa_mulai, $sewa_berakhir) {
-        //                 $q->where('sewa_berakhir', '>', $sewa_mulai)
-        //                     ->where('sewa_berakhir', '<=', $sewa_berakhir);
-        //             });
-        //     })
-        //     ->first();
+        // Check if there is any existing rental for the same barang and overlapping dates
+        $ada_sewa = SewaAlat::where('alat_id', $alat_id)
+            ->where(function ($query) use ($sewa_mulai, $sewa_berakhir) {
+                $query->where(function ($q) use ($sewa_mulai, $sewa_berakhir) {
+                    $q->where('sewa_mulai', '>=', $sewa_mulai)
+                        ->where('sewa_mulai', '<', $sewa_berakhir);
+                })
+                    ->orWhere(function ($q) use ($sewa_mulai, $sewa_berakhir) {
+                        $q->where('sewa_berakhir', '>', $sewa_mulai)
+                            ->where('sewa_berakhir', '<=', $sewa_berakhir);
+                    });
+            })
+            ->first();
 
-        // // If there is an existing rental, return a response indicating unavailability
+        // If there is an existing rental, return a response indicating unavailability
         // if ($ada_sewa && $alat->unit < $validated['banyak_unit']) {
         //     return back()->with('error', 'Barang tidak tersedia pada tanggal tersebut.');
         // }

@@ -76,11 +76,11 @@
             <x-input-error :messages="$errors->get('keterangan')" class="mt-2" />
         </div>
 
-        <label for="syarat" class="mt-5 mb-3">
+        <!-- <label for="syarat" class="mt-5 mb-3">
             <input type="checkbox" name="syarat" id="syarat" class="rounded" required>
             Saya menyetujui <a href="" class="underline hover:text-green-500">syarat dan
                 ketentuan</a> yang berlaku
-        </label>
+        </label> -->
 
         <button type="submit" class="px-3 leading-10 text-white bg-green-600 rounded hover:bg-green-500">Kirim</button>
     </form>

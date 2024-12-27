@@ -37,13 +37,13 @@
                 <x-input-label for="universitas">Jenis Layanan</x-input-label>
                 <!-- <x-text-input id="universitas" class="block w-full mt-1" type="text" name="universitas" :value="$is_edit ? old('universitas', $permohonan->universitas) : old('universitas')"
                     required /> -->
-                <select name="alat_id" id="alat_id"
+                <select name="universitas" id="universitas"
                     class="block w-full mt-1 truncate border-gray-300 rounded-md shadow-sm dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600">
                     <option value="">Pilih layanan...</option>
-                    <option value="">Layanan Klaim Asuransi</option>
-                    <option value="">Layanan Data</option>
-                    <option value="">Layanan Pemetaan</option>
-                    <option value="">Layanan Survey</option>
+                    <option value="Layanan Klaim Asuransi">Layanan Klaim Asuransi</option>
+                    <option value="Layanan Data">Layanan Data</option>
+                    <option value="Layanan Pemetaan">Layanan Pemetaan</option>
+                    <option value="Layanan Survey">Layanan Survey</option>
                 </select>
                 <x-input-error :messages="$errors->get('universitas')" class="mt-2" />
             </div>
@@ -54,6 +54,12 @@
                     required />
                 <x-input-error :messages="$errors->get('fakultas')" class="mt-2" />
             </div>
+            <div>
+                <x-input-label for="prodi">Full Name</x-input-label>
+                <x-text-input id="prodi" class="block w-full mt-1" type="text" name="prodi" :value="$is_edit ? old('prodi', $permohonan->prodi) : old('prodi')"
+                    required />
+                <x-input-error :messages="$errors->get('prodi')" class="mt-2" />
+            </div>
             <!-- <div>
                 <x-input-label for="keterangan">Keterangan</x-input-label>
                 <textarea id="keterangan"
@@ -62,13 +68,13 @@
                 <x-input-error :messages="$errors->get('keterangan')" class="mt-2" />
             </div> -->
 
-            <div>
+            <!-- <div>
                 <x-input-label for="prodi">Keterangan</x-input-label>
                 <textarea id="prodi"
                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600"
                     name="prodi" :value="$is_edit ? old('prodi', $permohonan->prodi) : old('prodi')"></textarea>
                 <x-input-error :messages="$errors->get('prodi')" class="mt-2" />
-            </div>
+            </div> -->
 
             <!-- <div class="flex gap-3">
                 <div class="relative flex-1">

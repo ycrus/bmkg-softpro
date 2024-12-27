@@ -15,8 +15,10 @@ class AdminPermohonanMagangController extends Controller
      */
     public function index()
     {
-        $data = ['title' => 'Permohonan Magang',
-                'permohonan' => Magang::all(),];
+        $data = [
+            'title' => 'Pelayanan Jasa',
+            'permohonan' => Magang::all(),
+        ];
         return view('pages.admin.permohonan-magang.index', $data);
     }
 
@@ -38,13 +40,9 @@ class AdminPermohonanMagangController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'universitas' => 'required',
-            'fakultas' => 'required',
-            'prodi' => 'required',
-            'tanggal_mulai' => 'required|date',
-            'tanggal_selesai' => 'required|date|after_or_equal:sewa_mulai',
-            // 'surat_permohonan' => 'nullable|max:2048',
-            // 'keterangan' => 'nullable',
+            'universitas' => 'nullable',
+            'fakultas' => 'nullable',
+            'prodi' => 'nullable',
         ]);
 
         // $validated['user_id'] = Auth::id();
@@ -66,7 +64,7 @@ class AdminPermohonanMagangController extends Controller
             return redirect()->route('admin.permohonan-magang.create')->with('error', 'Permohonan gagal dibuat');
         }
     }
-    
+
 
     /**
      * Display the specified resource.
