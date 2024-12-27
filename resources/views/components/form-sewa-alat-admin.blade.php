@@ -87,25 +87,6 @@
                     <x-input-error :messages="$errors->get('sewa_berakhir')" class="mt-2" />
                 </div>
             </div>
-            <!-- <div>
-                <x-input-label for="surat_permohonan">{{ $is_edit ? 'Update' : '' }} Surat Permohonan</x-input-label>
-                <div class="flex items-stretch w-full gap-3 mt-1">
-                    @if ($is_edit && $permohonan->surat_permohonan)
-                        <a class="flex items-center px-3 border border-gray-300 rounded"
-                            href="{{ route('sewa-alat.download-permohonan', ['sewa_alat' => $permohonan]) }}">
-                            <i class="fa-solid fa-file-arrow-down"></i> &nbsp; Download
-                        </a>
-                    @endif
-                    <div
-                        class="flex-1 block border border-gray-300 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300">
-
-                        <input type="file" accept=".png,.jpg,.jpeg,.pdf" name="surat_permohonan"
-                            id="surat_permohonan"
-                            class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-s-md file:border-0 file:text-sm file:font-semibold file:bg-green-50 file:text-green-700 hover:file:bg-green-100 hover:file:cursor-pointer" />
-                    </div>
-                </div>
-                <x-input-error :messages="$errors->get('surat_permohonan')" class="mt-2" />
-            </div> -->
         </div>
 
         <div class="flex flex-col flex-1 gap-3">

@@ -67,20 +67,7 @@
                     :value="old('sewa_berakhir')" placeholder="Hingga tanggal" required />
                 <x-input-error :messages="$errors->get('sewa_berakhir')" class="mt-2" />
             </div>
-
         </div>
-
-        <!-- <div>
-            <x-input-label for="surat_permohonan">Surat Permohonan</x-input-label>
-            <div
-                class="block mt-1 border border-gray-300 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300">
-                <span class="sr-only">Pilih file permohonan</span>
-                <input type="file" accept=".png,.jpg,.jpeg,.pdf" name="surat_permohonan" id="surat_permohonan"
-                    class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-s-md file:border-0 file:text-sm file:font-semibold file:bg-green-50 file:text-green-700 hover:file:bg-green-100 hover:file:cursor-pointer" />
-            </div>
-            <x-input-error :messages="$errors->get('surat_permohonan')" class="mt-2" />
-        </div> -->
-
         <div>
             <x-input-label for="keterangan">Keterangan</x-input-label>
             <textarea id="keterangan"
