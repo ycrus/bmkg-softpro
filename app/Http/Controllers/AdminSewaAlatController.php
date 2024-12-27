@@ -51,7 +51,7 @@ class AdminSewaAlatController extends Controller
             'banyak_unit' => 'required|numeric',
             'sewa_mulai' => 'required|date',
             'sewa_berakhir' => 'required|date|after_or_equal:sewa_mulai',
-            'surat_permohonan' => 'required|max:2048',
+            // 'surat_permohonan' => 'required|max:2048',
             'keterangan' => 'nullable',
         ]);
 
@@ -106,7 +106,7 @@ class AdminSewaAlatController extends Controller
             'status' => 'required',
             'sewa_mulai' => 'required|date',
             'sewa_berakhir' => 'required|date|after_or_equal:sewa_mulai',
-            'surat_permohonan' => 'nullable|max:2048',
+            // 'surat_permohonan' => 'nullable|max:2048',
             'keterangan' => 'nullable',
         ]);
 

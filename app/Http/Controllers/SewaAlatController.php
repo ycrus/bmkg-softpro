@@ -31,16 +31,16 @@ class SewaAlatController extends Controller
             'alat_id' => 'required',
             'sewa_mulai' => 'required|date',
             'sewa_berakhir' => 'required|date|after_or_equal:sewa_mulai',
-            'surat_permohonan' => 'required|max:2048',
+            // 'surat_permohonan' => 'required|max:2048',
             'keterangan' => 'nullable',
             'syarat' => 'required',
         ]);
 
-        $file = $request->file('surat_permohonan');
-        $file_name = 'sewa-alat_user:' . $request->user()->id . '_date:' . Carbon::now() . '.' . $file->getClientOriginalExtension();
-        $path_permohonan = $file->storeAs('public/permohonan/sewa-alat', $file_name);
+        // $file = $request->file('surat_permohonan');
+        // $file_name = 'sewa-alat_user:' . $request->user()->id . '_date:' . Carbon::now() . '.' . $file->getClientOriginalExtension();
+        // $path_permohonan = $file->storeAs('public/permohonan/sewa-alat', $file_name);
         $validated['user_id'] = Auth::id();
-        $validated['surat_permohonan'] = $path_permohonan;
+        // $validated['surat_permohonan'] = $path_permohonan;
 
         // $alat_id = $validated['alat_id'];
         // $sewa_mulai = $validated['sewa_mulai'];
