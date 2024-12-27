@@ -14,26 +14,13 @@
 
             <div>
                 <h3 class="mb-3 text-xl font-bold">Visi</h3>
-                <p class="mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde sapiente vel eveniet! Qui
-                    similique
-                    adipisci facere? Alias ut dignissimos cupiditate praesentium. Earum, temporibus. Tenetur iusto soluta
-                    mollitia pariatur maiores! Temporibus quis, impedit non laudantium, minus voluptate provident doloremque
-                    quibusdam maiores sequi quas tempore ducimus dignissimos quidem! Iste officiis consequatur quis aperiam
-                    fuga quaerat sint, aliquam unde accusamus qui vel quidem ab accusantium dolore veritatis doloribus
-                    exercitationem cum delectus ducimus voluptatum maiores voluptate quos. Id, eveniet obcaecati quidem
-                    dolorem dolores quaerat. Facere illo eligendi fugit esse a maiores, at cum hic quae doloremque ad
-                    accusamus accusantium consequuntur error ipsa molestias voluptates.</p>
+                <p class="mb-5">Mewujudkan BMKG yang handal, tanggap dan mampu dalam rangka mendukung keselamatan masyarakat serta keberhasilan pembangunan nasional dan berperan aktif di tingkat internasional.</p>
 
                 <h3 class="mt-10 mb-3 text-xl font-bold">Misi</h3>
-                <p class="mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde sapiente vel eveniet! Qui
-                    similique
-                    adipisci facere? Alias ut dignissimos cupiditate praesentium. Earum, temporibus. Tenetur iusto soluta
-                    mollitia pariatur maiores! Temporibus quis, impedit non laudantium, minus voluptate provident doloremque
-                    quibusdam maiores sequi quas tempore ducimus dignissimos quidem! Iste officiis consequatur quis aperiam
-                    fuga quaerat sint, aliquam unde accusamus qui vel quidem ab accusantium dolore veritatis doloribus
-                    exercitationem cum delectus ducimus voluptatum maiores voluptate quos. Id, eveniet obcaecati quidem
-                    dolorem dolores quaerat. Facere illo eligendi fugit esse a maiores, at cum hic quae doloremque ad
-                    accusamus accusantium consequuntur error ipsa molestias voluptates.</p>
+                <p class="mb-5">1. Mengamati dan memahami fenomena meteorologi, klimatologi, kualitas udara, dan geofisika.</p>
+                <p class="mb-5">2. Menyediakan data, informasi, dan jasa meteorologi, klimatologi, kualitas udara dan geofisika yang handal dan terpercaya.</p>
+                <p class="mb-5">3. Mengkoordinasikan dan memfasilitasi kegiatan di bidang meteorologi, klimatologi, kualitas udara dan geofisika.</p>
+
             </div>
         </div>
     </div>

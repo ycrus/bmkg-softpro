@@ -25,11 +25,11 @@
                     </div>
                 </div>
 
-                <div>
+                <!-- <div>
                     <h4 class="mb-2 text-xl font-bold">Konsultasi (WA)</h4>
                     <img src="{{ asset('/images/wa-link.png') }}" alt="WA Barcode"
                         class="w-full max-w-[300px] aspect-square">
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
