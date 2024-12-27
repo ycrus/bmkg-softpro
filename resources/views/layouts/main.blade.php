@@ -32,8 +32,8 @@
         chat-title="Megabot"
         agent-id="c9f258c1-8808-4b8e-b660-8efdca1c1703"
         chat-icon="images/icon.png"
-        language-code="en"
-        session-id="SESSION_ID_HERE">
+        language-code="en">
+        <!-- session-id="SESSION_ID_HERE" -->
     </df-messenger>
     <script>
         window.addEventListener("dfMessengerLoaded", function () {
