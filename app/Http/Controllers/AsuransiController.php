@@ -18,7 +18,7 @@ class AsuransiController extends Controller
     {
         $permohonan = Asuransi::all();
         $data = [
-            'title' => 'Permohonan Asuransi',
+            'title' => 'Permohonan Kunjungan',
             'permohonan' => $permohonan,
         ];
 
