@@ -9,7 +9,7 @@
                 <a href="/layanan" class="text-gray-400 hover:text-green-600">Layanan</a>
                 <i class="mx-2 text-sm fa-solid fa-angle-right"></i>
             </span>
-            <span>Permohonan Magang</span>
+            <span>Pelayanan Jasa</span>
         </h2>
     </x-slot>
 
