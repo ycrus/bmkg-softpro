@@ -45,13 +45,6 @@
             </div>
 
         <div>
-            <x-input-label for="fakultas">Fakultas</x-input-label>
-            <x-text-input id="fakultas" class="block w-full mt-1" type="text" name="fakultas" :value="old('fakultas')"
-                required />
-            <x-input-error :messages="$errors->get('fakultas')" class="mt-2" />
-        </div>
-
-        <div>
                 <x-input-label for="fakultas">No Whatsapp</x-input-label>
                 <x-text-input id="fakultas" class="block w-full mt-1" type="text" name="fakultas" :value="$is_edit ? old('fakultas', $permohonan->fakultas) : old('fakultas')"
                     required />
