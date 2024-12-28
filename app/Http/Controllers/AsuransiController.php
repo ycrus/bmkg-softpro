@@ -40,7 +40,7 @@ class AsuransiController extends Controller
     {
         $validated = $request->validate([
             'perusahaan' => 'required',
-            'tanggal' => 'required|date|before_or_equal:'.Carbon::now(),
+            'tanggal' => 'required|date',
             'lokasi' => 'required',
             'latitude' => 'required',
             'longitude' => 'required',

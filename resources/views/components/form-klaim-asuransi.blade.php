@@ -2,7 +2,7 @@
     class="relative p-6 overflow-hidden text-gray-900 bg-white shadow-sm dark:text-gray-100 dark:bg-gray-800 sm:rounded-lg h-max lg:sticky lg:top-12">
 
     <h2 class="flex items-center mb-4 text-xl font-semibold leading-tight text-gray-800 dark:text-gray-200">
-        Klaim Asuransi
+        Permohonan Kunjungan
     </h2>
 
     @if (session('success'))
