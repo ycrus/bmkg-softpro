@@ -27,7 +27,7 @@
         </div>
     @endif
 
-    <form action="{{ route('permohonan-magang.store') }}" method="POST" class="grid grid-cols-1 gap-3"
+    <form action="{{ route('pelayanan-jasa.store') }}" method="POST" class="grid grid-cols-1 gap-3"
         enctype="multipart/form-data">
         @csrf @method('post')
 

@@ -42,6 +42,10 @@ Route::get('/kontak', function () {
     return view('pages.kontak');
 })->name('kontak');
 
+Route::get('/kuisioner', function () {
+    return view('pages.kuisioner');
+})->name('kuisioner');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -71,11 +75,11 @@ Route::middleware('auth')->group(function () {
                 Route::get('/permohonan/{sewa_alat}/download', 'download')->name('download-permohonan'); // download permohonan
             });
 
-        Route::resource('permohonan-magang', MagangController::class);
+        Route::resource('pelayanan-jasa', MagangController::class);
         Route::get('permohonan-magang/{permohonan_magang}', [MagangController::class, 'download'])
             ->name('permohonan-magang.download');
 
-        Route::resource('klaim-asuransi', AsuransiController::class);
+        Route::resource('permohonan-kunjungan', AsuransiController::class);
         Route::get('klaim-asuransi/{klaim_asuransi}', [AsuransiController::class, 'download'])
             ->name('klaim-asuransi.download');
 
