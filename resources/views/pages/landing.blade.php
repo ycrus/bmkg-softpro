@@ -13,7 +13,7 @@ alat dilakukan dengan mudah dan efisien, sesuai dengan tarif yang telah ditetapk
 [
 'images' => '/images/layanan.jpg',
 'nama' => 'Pelayanan Jasa',
-'url' => '/layanan/konsultasi',
+'url' => '/layanan/pelayanan-jasa',
 'deskripsi' => 'Stasiun Geofisika juga menyediakan layanan informasi terkait gempa bumi, tsunami, dan listrik udara.
 Informasi ini dapat dimanfaatkan untuk berbagai keperluan, termasuk klaim asuransi. Semua tarif layanan telah disesuaikan
 dengan peraturan perundang-undangan yang berlaku, memastikan transparansi dan kepatuhan terhadap hukum.',
@@ -21,7 +21,7 @@ dengan peraturan perundang-undangan yang berlaku, memastikan transparansi dan ke
 [
 'images' => '/images/kunjungan.jpg',
 'nama' => 'Permohonan Kunjungan',
-'url' => '/layanan/klaim-asuransi',
+'url' => '/layanan/permohonan-kunjungan',
 'deskripsi' => 'Stasiun Geofisika Sleman menerima kunjungan edukatif dari berbagai tingkat pendidikan, mulai dari Taman Kanak-Kanak (TK) hingga perguruan tinggi.
 Selain itu, Stasiun Geofisika Sleman juga menyediakan layanan BGTS (BMKG Goes to School). ',
 ],
