@@ -30,6 +30,16 @@
     <form action="{{ route('klaim-asuransi.store') }}" method="POST" class="grid grid-cols-1 gap-3"
         enctype="multipart/form-data">
         @csrf @method('post')
+        <div>
+            <x-input-label for="kejadian">Jenis Kunjungan</x-input-label>
+            <select name="kejadian" id="kejadian"
+                    class="block w-full mt-1 truncate border-gray-300 rounded-md shadow-sm dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600">
+                    <option value="">Pilih kunjungan...</option>
+                    <option value="Go To School">Go To School</option>
+                    <option value="Go To BMKG">Go To BMKG</option>
+                </select>
+            <x-input-error :messages="$errors->get('lokasi')" class="mt-2" />
+        </div>
 
         <div>
             <x-input-label for="perusahaan">Nama Instansi</x-input-label>
@@ -51,6 +61,7 @@
                 required />
             <x-input-error :messages="$errors->get('lokasi')" class="mt-2" />
         </div>
+       
 
         <div class="flex gap-3">
             <div class="relative flex-1">
@@ -61,7 +72,7 @@
             </div>
 
             <div class="relative flex-1">
-            <x-input-label class="w-full" for="tanggal">Rencana Tanggal Kunjungan</x-input-label>
+            <x-input-label class="w-full" for="tanggal">Rencana Kunjungan</x-input-label>
             <x-text-input id="tanggal" class="block w-full mt-1" type="date" name="tanggal"
                 :value="old('tanggal')" placeholder="Tanggal Kejadian" required />
             <x-input-error :messages="$errors->get('tanggal')" class="mt-2" />

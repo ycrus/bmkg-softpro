@@ -20,10 +20,12 @@
                 <table class="w-full overflow-hidden rounded table-auto text-slate-600 dark:text-slate-400">
                     <thead class="border-b bg-slate-100 dark:bg-slate-900 border-b-slate-300 dark:border-b-slate-500">
                         <tr>
+                            <th class="p-3 text-left">Nama Instansi</th>
+                            <th class="p-3 text-left">Jenis Kunjungan</th>
                             <th class="p-3 text-left">Tanggal</th>
-                            <th class="p-3 text-left">Lokasi</th>
-                            <th class="p-3 text-left">Koordinat</th>
-                            <th class="p-3 text-left">Kejadian</th>
+                            <th class="p-3 text-left">No Whatsapp</th>
+                            <th class="p-3 text-left">Nama Lengkap</th>
+                            <th class="p-3 text-left">Jumlah Rombongan</th>
                             <th class="p-3 text-left">Status</th>
                         </tr>
                     </thead>
@@ -46,18 +48,24 @@
                                     @if ($item->status !== 'Menunggu') download = `{{ route('klaim-asuransi.download', ['klaim_asuransi' => $item]) }}`; @endif
                                 ">
                                 <td class="p-3 align-top max-w-[200px]">
+                                    {{ $item->perusahaan }}
+                                </td>
+                                <td class="p-3 align-top">
+                                    {{ $item->kejadian }}                            
+                                </td>
+                                <td class="p-3 align-top max-w-[200px]">
                                     {{ $item->tanggal }}
                                 </td>
                                 <td class="p-3 align-top max-w-[200px]">
                                     {{ $item->lokasi }}
                                 </td>
                                 <td class="p-3 align-top max-w-[200px]">
-                                    {{ $item->latitude }},{{ $item->longitude }}
+                                    {{ $item->longitude }}
                                 </td>
-                                <td class="p-3 align-top">
-                                    {{ $item->kejadian }}
-                                    
+                                <td class="p-3 align-top max-w-[200px]">
+                                    {{ $item->latitude }}
                                 </td>
+                               
                                 <td>
                                     <span class="font-bold text-yellow-500">
                                         {{ $item->status }}
