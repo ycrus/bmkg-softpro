@@ -38,9 +38,9 @@
                                     data.prodi = `{{ $item->prodi }}`;
                                     data.tanggal =`{{ $item->tanggal_mulai }} s/d {{ $item->tanggal_selesai }}`;
                                     data.status = `{{ $item->status }}`;
-                                    batal = `{{ route('permohonan-magang.destroy', ['permohonan_magang' => $item]) }}`;
+                                    batal = `{{ route('pelayanan-jasa.destroy', ['permohonan_magang' => $item]) }}`;
 
-                                    @if ($item->status !== 'Menunggu') download = `{{ route('permohonan-magang.download', ['permohonan_magang' => $item]) }}`; @endif
+                                    @if ($item->status !== 'Menunggu') download = `{{ route('pelayanan-jasa.download', ['permohonan_magang' => $item]) }}`; @endif
                                 ">
                                 <td class="p-3 align-top max-w-[200px]">
                         {{ $item->id }}
