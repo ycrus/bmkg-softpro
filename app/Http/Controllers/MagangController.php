@@ -38,12 +38,9 @@ class MagangController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'universitas' => 'required',
-            'fakultas' => 'required',
-            'prodi' => 'required',
-            'tanggal_mulai' => 'required|date',
-            'tanggal_selesai' => 'required|date|after_or_equal:tanggal_mulai',
-            'syarat' => 'required',
+            'universitas' => 'nullable',
+            'fakultas' => 'nullable',
+            'prodi' => 'nullable',
         ]);
 
         $validated['user_id'] = Auth::id();
