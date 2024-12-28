@@ -19,13 +19,13 @@
             <div class="w-full -mr-6 overflow-x-auto">
                 <table class="w-full overflow-hidden rounded table-auto text-slate-600 dark:text-slate-400">
                     <thead class="border-b bg-slate-100 dark:bg-slate-900 border-b-slate-300 dark:border-b-slate-500">
-                        <tr>
-                            <th class="p-3 text-left">Universitas</th>
-                            <th class="p-3 text-left">Fakultas</th>
-                            <th class="p-3 text-left">Prodi</th>
-                            <th class="p-3 text-left">Tanggal</th>
-                            <th class="p-3 text-left">Status</th>
-                        </tr>
+                    <tr>
+                    <th class="p-3 text-left">No</th>
+                    <th class="p-3 text-left">Jenis Layanan</th>
+                    <th class="p-3 text-left">Full Name</th>
+                    <th class="p-3 text-left">No Handphone</th>
+                    <th class="p-3 text-left">Status</th>
+                </tr>
                     </thead>
                     <tbody>
                         @foreach ($permohonan as $item)
@@ -43,19 +43,17 @@
                                     @if ($item->status !== 'Menunggu') download = `{{ route('permohonan-magang.download', ['permohonan_magang' => $item]) }}`; @endif
                                 ">
                                 <td class="p-3 align-top max-w-[200px]">
-                                    {{ $item->universitas }}
-                                </td>
-                                <td class="p-3 align-top max-w-[200px]">
-                                    {{ $item->fakultas }}
-                                </td>
-                                <td class="p-3 align-top max-w-[200px]">
-                                    {{ $item->prodi }}
-                                </td>
-                                <td class="p-3 align-top">
-                                    <span>{{ \Carbon\Carbon::parse($item->tanggal_mulai)->format('d/m/Y') }}</span>
-                                    -
-                                    <span>{{ \Carbon\Carbon::parse($item->tanggal_selesai)->format('d/m/Y') }}</span>
-                                </td>
+                        {{ $item->id }}
+                    </td>
+                    <td class="p-3 align-top max-w-[200px]">
+                        {{ $item->universitas }}
+                    </td>
+                    <td class="p-3 align-top">
+                        {{ $item->prodi }}
+                    </td>
+                    <td class="p-3 align-top">
+                        {{ $item->fakultas }}
+                    </td>
                                 <td>
                                     <span class="font-bold text-yellow-500">
                                         {{ $item->status }}
