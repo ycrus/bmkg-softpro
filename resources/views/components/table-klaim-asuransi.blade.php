@@ -43,7 +43,7 @@
                                     data.koordinat =`{{ $item->latitude }},{{ $item->longitude }}`;
                                     data.kejadian =`{{ $item->kejadian }}`;
                                     data.status = `{{ $item->status }}`;
-                                    batal = `{{ route('klaim-asuransi.destroy', ['klaim_asuransi' => $item]) }}`;
+                                    batal = `{{ route('permohonan-kunjungan.destroy', ['permohonan_kunjungan' => $item]) }}`;
 
                                     @if ($item->status !== 'Menunggu') download = `{{ route('klaim-asuransi.download', ['klaim_asuransi' => $item]) }}`; @endif
                                 ">

@@ -41,7 +41,7 @@
                                 data.kejadian =`{{ $item->kejadian }}`;
                                 data.status = `{{ $item->status }}`;
                                 edit = `{{ route('admin.klaim-asuransi.edit', ['klaim_asuransi' => $item]) }}`;
-                                action = `{{ route('klaim-asuransi.destroy', ['klaim_asuransi' => $item]) }}`;
+                                action = `{{ route('permohonan-kunjungan.destroy', ['permohonan_kunjungan' => $item]) }}`;
                                 ">
                             <td class="p-3 align-top max-w-[200px]">
                                 {{ $item->tanggal }}
