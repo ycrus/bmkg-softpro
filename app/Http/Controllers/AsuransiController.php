@@ -44,7 +44,6 @@ class AsuransiController extends Controller
             'lokasi' => 'required',
             'latitude' => 'required',
             'longitude' => 'required',
-            'kejadian' => 'required',
         ]);
 
         $validated['user_id'] = Auth::id();
