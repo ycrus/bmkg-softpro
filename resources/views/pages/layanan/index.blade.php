@@ -11,7 +11,7 @@ alat dilakukan dengan mudah dan efisien, sesuai dengan tarif yang telah ditetapk
 [
 'images' => '/images/layanan.jpg',
 'nama' => 'Pelayanan Jasa',
-'url' => '/layanan/konsultasi',
+'url' => '/layanan/permohonan-magang',
 'deskripsi' => 'Stasiun Geofisika juga menyediakan layanan informasi terkait gempa bumi, tsunami, dan listrik udara.
 Informasi ini dapat dimanfaatkan untuk berbagai keperluan, termasuk klaim asuransi. Semua tarif layanan telah disesuaikan
 dengan peraturan perundang-undangan yang berlaku, memastikan transparansi dan kepatuhan terhadap hukum.',
