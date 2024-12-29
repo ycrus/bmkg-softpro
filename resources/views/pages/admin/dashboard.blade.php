@@ -37,6 +37,5 @@
         </div> --}}
     </div>
 
-    <h3 class="text-xl font-bold dark:text-white">Permohonan Terbaru</h3>
-    @include('components.table-dashboard-admin', ['permohonan' => $permohonan])
+    <!-- <h3 class="text-xl font-bold dark:text-white">Permohonan Terbaru</h3> -->
 </x-admin-layout>

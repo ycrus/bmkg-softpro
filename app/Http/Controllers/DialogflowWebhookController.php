@@ -53,16 +53,16 @@ class DialogflowWebhookController extends Controller
  					count(intent) as jumlah
         from chatlogs c 
         where intent in(?, ?,?)
-        group by intent', array(
+        group by intent order by jumlah DESC', array(
             '02 Alat',
             'Sewa Alat',
-            '01 Layanan',
+            'Layanan jasa',
             'Pelayanan Jasa',
-            '03 Kunjungan',
+            '05 Kunjungan',
             'Permohonan Kunjungan',
             '02 Alat',
-            '01 Layanan',
-            '03 Kunjungan'
+            'Layanan jasa',
+            '05 Kunjungan'
         ));
 
         $data = [
