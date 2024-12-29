@@ -8,26 +8,26 @@
     download: null,
 }" class="flex flex-col h-full text-gray-900 dark:text-gray-100">
     @if ($permohonan->isEmpty())
-        <div class="grid flex-1 place-content-center">
-            <img src="{{ asset('images/alat-tidak-tersedia.svg') }}" alt="" width="200">
-            <p>Belum ada permohonan</p>
-        </div>
+    <div class="grid flex-1 place-content-center">
+        <img src="{{ asset('images/alat-tidak-tersedia.svg') }}" alt="" width="200">
+        <p>Belum ada permohonan</p>
+    </div>
     @else
-        <div class="w-full -mr-6 overflow-x-auto">
-            <table class="w-full overflow-hidden rounded table-auto text-slate-600 dark:text-slate-400">
-                <thead class="border-b bg-slate-100 dark:bg-slate-900 border-b-slate-300 dark:border-b-slate-500">
-                    <tr>
-                        <th class="p-3 text-left">Tanggal</th>
-                        <th class="p-3 text-left">Lokasi</th>
-                        <th class="p-3 text-left">Koordinat</th>
-                        <th class="p-3 text-left">Kejadian</th>
-                        <th class="p-3 text-left">Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($permohonan as $item)
-                        <tr class="transition duration-200 border-b hover:cursor-pointer border-b-slate-300 dark:border-b-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700"
-                            @click="
+    <div class="w-full -mr-6 overflow-x-auto">
+        <table class="w-full overflow-hidden rounded table-auto text-slate-600 dark:text-slate-400">
+            <thead class="border-b bg-slate-100 dark:bg-slate-900 border-b-slate-300 dark:border-b-slate-500">
+                <tr>
+                    <th class="p-3 text-left">Tanggal</th>
+                    <th class="p-3 text-left">Lokasi</th>
+                    <th class="p-3 text-left">Koordinat</th>
+                    <th class="p-3 text-left">Kejadian</th>
+                    <th class="p-3 text-left">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($permohonan as $item)
+                <tr class="transition duration-200 border-b hover:cursor-pointer border-b-slate-300 dark:border-b-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700"
+                    @click="
                                 showModalPermohonan = true;
                                 expanded = false;
                                 data.id = `{{ $item->id }}`;
@@ -40,32 +40,32 @@
                                 data.koordinat =`{{ $item->latitude }},{{ $item->longitude }}`;
                                 data.kejadian =`{{ $item->kejadian }}`;
                                 data.status = `{{ $item->status }}`;
-                                edit = `{{ route('admin.klaim-asuransi.edit', ['klaim_asuransi' => $item]) }}`;
+                                edit = `{{ route('admin.permohonan-kunjungan.edit', ['permohonan_kunjungan' => $item]) }}`;
                                 action = `{{ route('permohonan-kunjungan.destroy', ['permohonan_kunjungan' => $item]) }}`;
                                 ">
-                            <td class="p-3 align-top max-w-[200px]">
-                                {{ $item->tanggal }}
-                            </td>
-                            <td class="p-3 align-top max-w-[200px]">
-                                {{ $item->lokasi }}
-                            </td>
-                            <td class="p-3 align-top max-w-[200px]">
-                                {{ $item->latitude }},{{ $item->longitude }}
-                            </td>
-                            <td class="p-3 align-top">
-                                {{ $item->kejadian }}
-                                
-                            </td>
-                            <td class="p-3 align-top">
-                                <span class="font-bold text-yellow-500">
-                                    {{ $item->status }}
-                                </span>
-                            </td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
+                    <td class="p-3 align-top max-w-[200px]">
+                        {{ $item->tanggal }}
+                    </td>
+                    <td class="p-3 align-top max-w-[200px]">
+                        {{ $item->lokasi }}
+                    </td>
+                    <td class="p-3 align-top max-w-[200px]">
+                        {{ $item->latitude }},{{ $item->longitude }}
+                    </td>
+                    <td class="p-3 align-top">
+                        {{ $item->kejadian }}
+
+                    </td>
+                    <td class="p-3 align-top">
+                        <span class="font-bold text-yellow-500">
+                            {{ $item->status }}
+                        </span>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
     @endif
 
     <!-- Modal -->

@@ -36,8 +36,8 @@
                                 data.prodi = `{{ $item->prodi }}`;
                                 data.tanggal = `{{ $item->tanggal_mulai }} s/d {{ $item->tanggal_selesai }}`;
                                 data.status = `{{ $item->status }}`;
-                                edit = `{{ route('admin.permohonan-magang.edit', ['permohonan_magang' => $item]) }}`;
-                                action = `{{ route('permohonan-magang.destroy', ['permohonan_magang' => $item]) }}`;
+                                edit = `{{ route('admin.pelayanan-jasa.edit', ['pelayanan_jasa' => $item]) }}`;
+                                action = `{{ route('pelayanan-jasa.destroy', ['pelayanan_jasa' => $item]) }}`;
                                 ">
                     <td class="p-3 align-top max-w-[200px]">
                         {{ $item->id }}

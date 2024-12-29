@@ -130,7 +130,7 @@ class AdminKlaimAsuransiController extends Controller
             return redirect()->route('admin.klaim-asuransi.index')->with('success', 'Permohonan berhasil diupdate');
         } catch (Exception $error) {
             report($error->getMessage());
-            return redirect()->route('admin.klaim-asuransi.edit')->with('error', 'Permohonan gagal diupdate');
+            return redirect()->route('admin.permohonan-kunjungan.edit')->with('error', 'Permohonan gagal diupdate');
         }
     }
 

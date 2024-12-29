@@ -93,8 +93,8 @@ Route::middleware('auth')->group(function () {
         Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
         Route::resource('sewa-alat', AdminSewaAlatController::class);
         Route::resource('history-megabot', DialogflowWebhookController::class);
-        Route::resource('permohonan-magang', AdminPermohonanMagangController::class);
-        Route::resource('klaim-asuransi', AdminKlaimAsuransiController::class);
+        Route::resource('pelayanan-jasa', AdminPermohonanMagangController::class);
+        Route::resource('permohonan-kunjungan', AdminKlaimAsuransiController::class);
         Route::resource('peta-sebaran', AdminPetaSebaranController::class);
         Route::get('/download-excel', function () {
             return Excel::download(new ChatExport, 'data.xlsx');

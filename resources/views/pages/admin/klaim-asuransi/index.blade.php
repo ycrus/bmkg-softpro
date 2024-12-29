@@ -1,7 +1,7 @@
 <x-admin-layout>
     <x-slot name="title">Klaim Asuransi</x-slot>
     <x-slot name="button">
-        <a href="{{ route('admin.klaim-asuransi.create') }}"
+        <a href="{{ route('admin.permohonan-kunjungan.create') }}"
             class="col-start-2 px-3 py-2 mt-5 ml-auto leading-10 text-white bg-green-600 rounded w-max hover:bg-green-500">
             + Permohonan
         </a>
