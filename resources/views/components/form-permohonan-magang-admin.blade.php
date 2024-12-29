@@ -23,7 +23,7 @@
     @endif
 
     <form
-        action="{{ $is_edit ? route('admin.permohonan-magang.update', ['permohonan_magang' => $permohonan]) : route('admin.pelayanan-jasa.store') }}"
+        action="{{ $is_edit ? route('admin.pelayanan-jasa.update', ['pelayanan_jasa' => $permohonan]) : route('admin.pelayanan-jasa.store') }}"
         method="POST" class="grid max-w-md grid-cols-1 gap-3" enctype="multipart/form-data">
         @csrf
         @if ($is_edit)

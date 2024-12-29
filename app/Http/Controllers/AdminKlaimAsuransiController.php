@@ -64,10 +64,10 @@ class AdminKlaimAsuransiController extends Controller
 
         try {
             Asuransi::create($validated);
-            return redirect()->route('admin.klaim-asuransi.create')->with('success', 'Permohonan berhasil dibuat');
+            return redirect()->route('admin.permohonan-kunjungan.create')->with('success', 'Permohonan berhasil dibuat');
         } catch (Exception $error) {
             report($error->getMessage());
-            return redirect()->route('admin.klaim-asuransi.create')->with('error', 'Permohonan gagal dibuat');
+            return redirect()->route('admin.permohonan-kunjungan.create')->with('error', 'Permohonan gagal dibuat');
         }
     }
 
@@ -127,7 +127,7 @@ class AdminKlaimAsuransiController extends Controller
 
         try {
             $klaim_asuransi->update($validated);
-            return redirect()->route('admin.klaim-asuransi.index')->with('success', 'Permohonan berhasil diupdate');
+            return redirect()->route('admin.permohonan-kunjungan.index')->with('success', 'Permohonan berhasil diupdate');
         } catch (Exception $error) {
             report($error->getMessage());
             return redirect()->route('admin.permohonan-kunjungan.edit')->with('error', 'Permohonan gagal diupdate');

@@ -58,10 +58,10 @@ class AdminPermohonanMagangController extends Controller
 
         try {
             Magang::create($validated);
-            return redirect()->route('admin.permohonan-magang.create')->with('success', 'Permohonan berhasil dibuat');
+            return redirect()->route('admin.pelayanan-jasa.create')->with('success', 'Permohonan berhasil dibuat');
         } catch (Exception $error) {
             report($error->getMessage());
-            return redirect()->route('admin.permohonan-magang.create')->with('error', 'Permohonan gagal dibuat');
+            return redirect()->route('admin.pelayanan-jasa.create')->with('error', 'Permohonan gagal dibuat');
         }
     }
 
@@ -120,10 +120,10 @@ class AdminPermohonanMagangController extends Controller
 
         try {
             $permohonan_magang->update($validated);
-            return redirect()->route('admin.permohonan-magang.index')->with('success', 'Permohonan berhasil diupdate');
+            return redirect()->route('admin.pelayanan-jasa.index')->with('success', 'Permohonan berhasil diupdate');
         } catch (Exception $error) {
             report($error->getMessage());
-            return redirect()->route('admin.permohonan-magang.edit')->with('error', 'Permohonan gagal diupdate');
+            return redirect()->route('admin.pelayanan-jasa.edit')->with('error', 'Permohonan gagal diupdate');
         }
     }
 

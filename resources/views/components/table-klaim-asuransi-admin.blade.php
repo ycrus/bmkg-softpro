@@ -17,10 +17,12 @@
         <table class="w-full overflow-hidden rounded table-auto text-slate-600 dark:text-slate-400">
             <thead class="border-b bg-slate-100 dark:bg-slate-900 border-b-slate-300 dark:border-b-slate-500">
                 <tr>
+                    <th class="p-3 text-left">Nama Instansi</th>
+                    <th class="p-3 text-left">Jenis Kunjungan</th>
                     <th class="p-3 text-left">Tanggal</th>
-                    <th class="p-3 text-left">Lokasi</th>
-                    <th class="p-3 text-left">Koordinat</th>
-                    <th class="p-3 text-left">Kejadian</th>
+                    <th class="p-3 text-left">No Whatsapp</th>
+                    <th class="p-3 text-left">Nama Lengkap</th>
+                    <th class="p-3 text-left">Jumlah Rombongan</th>
                     <th class="p-3 text-left">Status</th>
                 </tr>
             </thead>
@@ -37,12 +39,19 @@
                                 data.prodi = `{{ $item->prodi }}`;
                                 data.latitude =`{{ $item->latitude }}`;
                                 data.longitude =`{{ $item->longitude }}`;
-                                data.koordinat =`{{ $item->latitude }},{{ $item->longitude }}`;
+                                data.jumlah_rombongan =`{{ $item->latitude }}`;
+                                data.nama_lengkap =`{{ $item->longitude }}`;
                                 data.kejadian =`{{ $item->kejadian }}`;
                                 data.status = `{{ $item->status }}`;
                                 edit = `{{ route('admin.permohonan-kunjungan.edit', ['permohonan_kunjungan' => $item]) }}`;
                                 action = `{{ route('permohonan-kunjungan.destroy', ['permohonan_kunjungan' => $item]) }}`;
                                 ">
+                    <td class="p-3 align-top max-w-[200px]">
+                        {{ $item->perusahaan }}
+                    </td>
+                    <td class="p-3 align-top">
+                        {{ $item->kejadian }}
+                    </td>
                     <td class="p-3 align-top max-w-[200px]">
                         {{ $item->tanggal }}
                     </td>
@@ -50,13 +59,13 @@
                         {{ $item->lokasi }}
                     </td>
                     <td class="p-3 align-top max-w-[200px]">
-                        {{ $item->latitude }},{{ $item->longitude }}
+                        {{ $item->longitude }}
                     </td>
-                    <td class="p-3 align-top">
-                        {{ $item->kejadian }}
+                    <td class="p-3 align-top max-w-[200px]">
+                        {{ $item->latitude }}
+                    </td>
 
-                    </td>
-                    <td class="p-3 align-top">
+                    <td>
                         <span class="font-bold text-yellow-500">
                             {{ $item->status }}
                         </span>
@@ -91,16 +100,16 @@
             <!-- content -->
             <div class="modal-content">
                 <dl class="grid grid-cols-2 gap-y-3">
-                    <dt class="text-sm text-slate-500">Tanggal</dt>
+                    <dt class="text-sm text-slate-500">Rencana Kunjungan</dt>
                     <dd x-text="data.tanggal"></dd>
 
-                    <dt class="text-sm text-slate-500">Lokasi</dt>
+                    <dt class="text-sm text-slate-500">Phone Number</dt>
                     <dd x-text="data.lokasi"></dd>
 
-                    <dt class="text-sm text-slate-500">Koordinat</dt>
-                    <dd x-text="data.koordinat"></dd>
+                    <dt class="text-sm text-slate-500">Jumlah Rombongan</dt>
+                    <dd x-text="data.jumlah_rombongan"></dd>
 
-                    <dt class="text-sm text-slate-500">Kejadian</dt>
+                    <dt class="text-sm text-slate-500">Jenis Kunjungan</dt>
                     <dd x-text="data.kejadian"></dd>
 
                     <dt class="text-sm text-slate-500">Status</dt>
