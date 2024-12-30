@@ -24,7 +24,7 @@ class AdminController extends Controller
         $bintang = DB::select(' select  right(question,1) ::int as value, count(question) ::int as total
         from chatlogs c 
         where intent = ?
-        group by question order by value DESC', array('Bintang'));
+        group by value order by value DESC', array('Bintang'));
 
         $data = [
             'title' => 'Dashboard',
