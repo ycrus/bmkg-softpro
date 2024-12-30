@@ -21,6 +21,11 @@ class AdminController extends Controller
         from chatlogs c 
         where intent = ?)data', array('Bintang'));
 
+        $bintang = DB::select(' select  right(question,1) ::int as value, count(question) ::int as total
+        from chatlogs c 
+        where intent = ?
+        group by question', array('Bintang'));
+
         $data = [
             'title' => 'Dashboard',
             'sewa_alat' => $sewa_alat,
@@ -28,6 +33,7 @@ class AdminController extends Controller
             'asuransi' => $asuransi,
             // 'permohonan' => $permohonan,
             'bintang' => $rating,
+            'rating' => $bintang,
         ];
 
         return view('pages.admin.dashboard', $data);
