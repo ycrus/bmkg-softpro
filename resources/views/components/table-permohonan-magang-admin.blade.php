@@ -31,10 +31,9 @@
                                 showModalPermohonan = true;
                                 expanded = false;
                                 data.id = `{{ $item->id }}`;
-                               
+                                data.universitas = `{{ $item->universitas }}`;
                                 data.fakultas = `{{ $item->fakultas }}`;
                                 data.prodi = `{{ $item->prodi }}`;
-                                data.tanggal = `{{ $item->tanggal_mulai }} s/d {{ $item->tanggal_selesai }}`;
                                 data.status = `{{ $item->status }}`;
                                 edit = `{{ route('admin.pelayanan-jasa.edit', ['pelayanan_jasa' => $item]) }}`;
                                 action = `{{ route('pelayanan-jasa.destroy', ['pelayanan_jasa' => $item]) }}`;
@@ -86,17 +85,14 @@
             <!-- content -->
             <div class="modal-content">
                 <dl class="grid grid-cols-2 gap-y-3">
-                    <dt class="text-sm text-slate-500">Universitas</dt>
+                    <dt class="text-sm text-slate-500">Jenis Layanan</dt>
                     <dd x-text="data.universitas"></dd>
 
-                    <dt class="text-sm text-slate-500">Fakultas</dt>
+                    <dt class="text-sm text-slate-500">Phone Number</dt>
                     <dd x-text="data.fakultas"></dd>
 
-                    <dt class="text-sm text-slate-500">Program Studi</dt>
+                    <dt class="text-sm text-slate-500">Full Name</dt>
                     <dd x-text="data.prodi"></dd>
-
-                    <dt class="text-sm text-slate-500">Tanggal</dt>
-                    <dd x-text="data.tanggal"></dd>
 
                     <dt class="text-sm text-slate-500">Status</dt>
                     <dd x-text="data.status"></dd>
