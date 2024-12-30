@@ -26,7 +26,7 @@
             @foreach ($rating as $star)
             @if($star->value == 5)
             <div class="rating">
-                <span>{{ $star->total }}</span>
+                <span>({{ $star->total }})</span>
                 <span data-value="5" class="star">&#9733;</span>
                 <span data-value="4" class="star">&#9733;</span>
                 <span data-value="3" class="star">&#9733;</span>
@@ -35,7 +35,7 @@
             </div>
             @elseif($star->value == 4)
             <div class="rating">
-                <span>{{ $star->total }}</span>
+                <span>({{ $star->total }})</span>
                 <span data-value="4" class="star">&#9733;</span>
                 <span data-value="3" class="star">&#9733;</span>
                 <span data-value="2" class="star">&#9733;</span>
@@ -43,20 +43,20 @@
             </div>
             @elseif($star->value == 3)
             <div class="rating">
-                <span>{{ $star->total }}</span>
+                <span>({{ $star->total }})</span>
                 <span data-value="3" class="star">&#9733;</span>
                 <span data-value="2" class="star">&#9733;</span>
                 <span data-value="1" class="star">&#9733;</span>
             </div>
             @elseif($star->value == 2)
             <div class="rating">
-                <span>{{ $star->total }}</span>
+                <span>({{ $star->total }})</span>
                 <span data-value="2" class="star">&#9733;</span>
                 <span data-value="1" class="star">&#9733;</span>
             </div>
             @elseif($star->value == 1)
             <div class="rating">
-                <span>{{ $star->total }}</span>
+                <span>({{ $star->total }})</span>
                 <span data-value="1" class="star">&#9733;</span>
             </div>
             @endif
