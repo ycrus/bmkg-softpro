@@ -99,6 +99,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/download-excel', function () {
             return Excel::download(new ChatExport, 'data.xlsx');
         });
+        Route::get('/api/chart-data', [AdminController::class, 'getChartData']);
     });
 });
 

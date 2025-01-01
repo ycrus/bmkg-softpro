@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Asuransi;
 use App\Models\Magang;
 use App\Models\SewaAlat;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class AdminController extends Controller
 {
@@ -37,5 +39,47 @@ class AdminController extends Controller
         ];
 
         return view('pages.admin.dashboard', $data);
+    }
+
+    public function getChartData(Request $request)
+    {
+        // Get the current month and year
+        $currentMonth = Carbon::now()->month;
+        $currentYear = Carbon::now()->year;
+
+        // Get query parameters, default to the current month and year if not provided
+        $month = $request->query('month', $currentMonth);
+        $year = $request->query('year', $currentYear);
+
+        // Build the query
+        $query = DB::table('chatlogs as c')
+            ->selectRaw("
+            CASE 
+                WHEN intent = '02 Alat' THEN 'Sewa Alat' 
+                WHEN intent = '01 Layanan' THEN 'Pelayanan Jasa'
+                WHEN intent = '05 Kunjungan' THEN 'Permohonan Kunjungan'
+            END as label,
+            COUNT(intent) as value,
+            EXTRACT(MONTH FROM created_at) as month,
+            EXTRACT(YEAR FROM created_at) as year
+        ")
+            ->whereIn('intent', ['02 Alat', '01 Layanan', '05 Kunjungan'])
+            ->whereRaw('EXTRACT(MONTH FROM created_at) = ?', [$month])
+            ->whereRaw('EXTRACT(YEAR FROM created_at) = ?', [$year])
+            ->groupBy('intent', 'month', 'year');
+
+        // Execute the query
+        $results = $query->get();
+
+        // Calculate max value
+        $maxValue = $results->max('value');
+
+        // Return response
+        return response()->json([
+            'data' => $results,
+            'maxValue' => $maxValue,
+            'currentMonth' => $month,
+            'currentYear' => $year
+        ]);
     }
 }

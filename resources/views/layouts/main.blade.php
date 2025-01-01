@@ -36,17 +36,17 @@
         <!-- session-id="SESSION_ID_HERE" -->
     </df-messenger>
     <script>
-        window.addEventListener("dfMessengerLoaded", function () {
-        const messenger = document.querySelector("df-messenger");
-        const sessionId = localStorage.getItem("dialogflowSessionId") || generateSessionId();
-        messenger.setAttribute("session-id", sessionId);
+        window.addEventListener("dfMessengerLoaded", function() {
+            const messenger = document.querySelector("df-messenger");
+            const sessionId = localStorage.getItem("dialogflowSessionId") || generateSessionId();
+            messenger.setAttribute("session-id", sessionId);
         });
 
         function generateSessionId() {
-        const id = Math.random().toString(36).substring(7);
-        localStorage.setItem("dialogflowSessionId", id);
-        return id;
-    }
+            const id = Math.random().toString(36).substring(7);
+            localStorage.setItem("dialogflowSessionId", id);
+            return id;
+        }
     </script>
     @include('components.footer')
 

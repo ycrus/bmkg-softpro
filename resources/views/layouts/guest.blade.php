@@ -15,6 +15,8 @@
 
     <!-- Scripts -->
     @vite(['public/css/app.css', 'public/js/app.js'])
+
+
 </head>
 
 <body class="font-sans antialiased text-gray-900">

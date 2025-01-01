@@ -13,6 +13,110 @@
 
     @yield('styles')
 
+    <!-- Style -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .chart-container {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            /* Distribute bars evenly with spacing */
+            width: 80%;
+            height: 300px;
+            border-left: 2px solid #333;
+            border-bottom: 2px solid #333;
+            position: relative;
+        }
+
+        .chart-container::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            bottom: 0;
+            width: 10px;
+            height: 10px;
+            background: #333;
+        }
+
+        .bar {
+            flex: 1;
+            /* Allow bars to take up equal space */
+            max-width: 50px;
+            /* Set a maximum width for bars */
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 4px 4px 0 0;
+            margin: 0 5px;
+            /* Add horizontal spacing between bars */
+        }
+
+        .bar span {
+            position: relative;
+            top: -20px;
+            font-size: 14px;
+        }
+
+        .x-labels {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-around;
+            /* Align labels with bars */
+            width: 80%;
+        }
+
+        .x-label {
+            text-align: center;
+            flex: 1;
+        }
+
+        .custom-select {
+            text-align: right;
+            min-width: 100px;
+        }
+
+        .custom-select select {
+            appearance: none;
+            width: 25%;
+            height: 50px;
+            font-size: 1rem;
+            padding: 0.1em 0.1em 0.1em 0.5em;
+            background-color: #fff;
+            border: 1px solid #caced1;
+            border-radius: 0.15rem;
+            color: #000;
+            cursor: pointer;
+        }
+
+        .y-labels {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            height: 300px;
+            margin-right: 10px;
+        }
+
+        .y-label {
+            text-align: right;
+            font-size: 12px;
+            padding-right: 5px;
+        }
+
+        .chart-container-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+        }
+    </style>
     <!-- Scripts -->
     @vite(['public/css/app.css', 'public/js/app.js'])
 </head>
