@@ -62,8 +62,8 @@
 
         .bar span {
             position: relative;
-            top: -20px;
-            font-size: 14px;
+            top: -3px;
+            font-size: 10px;
         }
 
         .x-labels {

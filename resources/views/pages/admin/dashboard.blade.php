@@ -93,14 +93,15 @@
                 xLabels.innerHTML = ''; // Clear existing X-axis labels
 
                 // Render Y-axis labels dynamically
-                renderYLabels(maxValue);
+                let maxValuelabels = Math.ceil(maxValue + (maxValue * 0.2));
+                renderYLabels(maxValuelabels);
 
                 // Render bars and labels
                 data.forEach(item => {
                     // Create a bar
                     const bar = document.createElement('div');
                     bar.className = 'bar';
-                    bar.style.height = `${(item.value / maxValue) * 100}%`;
+                    bar.style.height = `${(item.value / maxValuelabels) * 100}%`;
 
                     // Add value inside the bar
                     const value = document.createElement('span');
@@ -124,7 +125,7 @@
             function renderYLabels(maxValue) {
                 yLabels.innerHTML = ''; // Clear existing labels
 
-                const numberOfLabels = 5; // Number of Y-axis labels
+                const numberOfLabels = 2; // Number of Y-axis labels
                 const step = Math.ceil(maxValue / numberOfLabels);
 
                 for (let i = 0; i <= numberOfLabels; i++) {
