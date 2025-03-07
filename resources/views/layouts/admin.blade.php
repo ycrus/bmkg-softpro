@@ -9,6 +9,7 @@
         </h2>
     </x-slot>
 
+
     <div class="py-3 lg:py-5">
         <div class="grid grid-cols-1 mx-auto gap-y-3 lg:gap-x-5 lg:grid-cols-4 max-w-7xl sm:px-6 lg:px-8">
             @include('components.admin-sidebar')
